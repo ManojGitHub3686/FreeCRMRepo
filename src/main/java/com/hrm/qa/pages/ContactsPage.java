@@ -89,16 +89,16 @@ public class ContactsPage extends TestBase {
 		}
 		saveBtn.click();
 		// explicit wait - to wait for the compose button to be click-able
-		/*
-		 * WebDriverWait wait = new WebDriverWait(driver, TestUtil.EXPLICIT_WAIT);
-		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-		 * "//body/div[@id='ui']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[5]/div[2]/a[1]/div[1]"
-		 * )));
-		 * 
-		 * boolean b1 = verifyEmail.isDisplayed();
-		 * 
-		 * Assert.assertEquals(b1, true, "Not matched");;
-		 */		
+		
+		  WebDriverWait wait = new WebDriverWait(driver, TestUtil.EXPLICIT_WAIT);
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		  "//body/div[@id='ui']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[5]/div[2]/a[1]/div[1]"
+		  )));
+		  
+		  boolean b1 = verifyEmail.isDisplayed();
+		  
+		  Assert.assertEquals(b1, true, "Not matched");;
+		 		
 		
 	}
 
